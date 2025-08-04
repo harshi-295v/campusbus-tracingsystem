@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stylelog.css" />
+    </head>
+    <body>
+        <form id="registerform">
+            <label>Username: <input type="text" id="username" placeholder="Username" required /></label>
+            <label>Password: <input type="password" id="password" placeholder="Password" required /></label>
+            <button type="submit">Register</button>
+            <button id="loginpb" type="button" onclick="window.location.href='login.html'">Have an account?Login Here</button>
+        </form>
+        <script>
+            document.querySelector("#registerform").addEventListener("submit", function (event) {
+                event.preventDefault();
+                let username = document.querySelector("#username").value;
+                let password = document.querySelector("#password").value;
+                alert(`Username: ${username}\nPassword: ${password}`);
+                window.location.href = "index.html";
+            });
+        </script>
+    </body>
+</html>

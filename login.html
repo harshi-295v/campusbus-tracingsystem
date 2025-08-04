@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stylelog.css" />
+    </head>
+    <body>
+        <form id="loginform">
+            <label>Username: <input type="text" id="username" placeholder="Username" required /></label>
+            <label>Password: <input type="password" id="password" placeholder="Password" required /></label>
+            <button type="submit">Login</button>
+            <button id="signpb" type="button" onclick="window.location.href='register.html'">Don't have an account?Register Here</button>
+        </form>
+        <script>
+            document.querySelector("#loginform").addEventListener("submit", function (event) {
+                event.preventDefault();
+                let username = document.querySelector("#username").value;
+                let password = document.querySelector("#password").value;
+                alert(`Username: ${username}\nPassword: ${password}`);
+                window.location.href = "index.html";
+            });
+        </script>
+    </body>
+</html>
